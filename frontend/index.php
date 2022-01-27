@@ -1,3 +1,7 @@
+<?php
+  require "../backend/init.php";
+  ?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +11,7 @@
 
 	<!-- Font -->
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600%7CUbuntu:300,400,500,700" rel="stylesheet">
-	 
+
 	<!-- CSS -->
 	<link rel="stylesheet" href="css/bootstrap-reboot.min.css">
 	<link rel="stylesheet" href="css/bootstrap-grid.min.css">
@@ -21,7 +25,7 @@
 	<link rel="stylesheet" href="css/main.css">
 
 	<!-- Favicons -->
-	<link rel="icon" type="image/png" href="icon/favicon-32x32.png" sizes="32x32">
+	<link rel="icon" type="image/png" href="img/mellow4.svg" sizes="32x32">
 	<link rel="apple-touch-icon" href="icon/favicon-32x32.png">
 	<link rel="apple-touch-icon" sizes="72x72" href="icon/apple-touch-icon-72x72.png">
 	<link rel="apple-touch-icon" sizes="114x114" href="icon/apple-touch-icon-114x114.png">
@@ -30,7 +34,7 @@
 	<meta name="description" content="">
 	<meta name="keywords" content="">
 	<meta name="author" content="Dalton">
-	<title>MELLOW</title>
+	<title>Mellowtoons</title>
 
 </head>
 <body class="body">
@@ -43,7 +47,7 @@
 					<div class="col-12">
 						<div class="header__content">
 							<!-- header logo -->
-							<a href="index.html" class="header__logo">
+							<a href="index.php" class="header__logo">
 								<img src="img/mellow4.svg" alt="">
 							</a>
 							<!-- end header logo -->
@@ -55,8 +59,8 @@
 									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuHome" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Home</a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuHome">
-										<li><a href="index.html">Home slideshow bg</a></li>
-										<li><a href="index2.html">Home static bg</a></li>
+										<li><a href="index.php">Home slideshow bg</a></li>
+										<li><a href="index2.php">Home static bg</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
@@ -66,20 +70,20 @@
 									<a class="dropdown-toggle header__nav-link" href="#" role="button" id="dropdownMenuCatalog" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Catalog</a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuCatalog">
-										<li><a href="catalog1.html">Catalog Grid</a></li>
-										<li><a href="catalog2.html">Catalog List</a></li>
-										<li><a href="details1.html">Details Movie</a></li>
-										<li><a href="details2.html">Details TV Series</a></li>
+										<li><a href="catalog1.php">Catalog Grid</a></li>
+										<li><a href="catalog2.php">Catalog List</a></li>
+										<li><a href="details1.php">Details Movie</a></li>
+										<li><a href="details2.php">Details TV Series</a></li>
 									</ul>
 								</li>
 								<!-- end dropdown -->
 
 								<li class="header__nav-item">
-									<a href="pricing.html" class="header__nav-link">Pricing Plan</a>
+									<a href="pricing.php" class="header__nav-link">Pricing Plan</a>
 								</li>
 
 								<li class="header__nav-item">
-									<a href="faq.html" class="header__nav-link">Help</a>
+									<a href="faq.php" class="header__nav-link">Help</a>
 								</li>
 
 								<!-- dropdown -->
@@ -87,9 +91,9 @@
 									<a class="dropdown-toggle header__nav-link header__nav-link--more" href="#" role="button" id="dropdownMenuMore" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="icon ion-ios-more"></i></a>
 
 									<ul class="dropdown-menu header__dropdown-menu" aria-labelledby="dropdownMenuMore">
-										<li><a href="about.html">About</a></li>
-										<li><a href="signin.html">Sign In</a></li>
-										<li><a href="signup.html">Sign Up</a></li>
+										<li><a href="about.php">About</a></li>
+										<!-- <li><a href="signin.php">Sign In</a></li> -->
+										<li><a href="account.php">Account</a></li>
 										<li><a href="404.html">404 Page</a></li>
 									</ul>
 								</li>
@@ -103,9 +107,9 @@
 									<i class="icon ion-ios-search"></i>
 								</button>
 
-								<a href="signin.html" class="header__sign-in">
+								<a href="signin.php" class="header__sign-in">
 									<i class="icon ion-ios-log-in"></i>
-									<span>sign in</span>
+									<span>sign out</span>
 								</a>
 							</div>
 							<!-- end header auth -->
@@ -142,7 +146,16 @@
 	<!-- end header -->
 
 	<!-- home -->
-	<section class="home home--bg">
+	<section class="home">
+		<!-- home bg -->
+		<div class="owl-carousel home__bg">
+			<div class="item home__cover" data-bg="img/home/home__bg.jpg"></div>
+			<div class="item home__cover" data-bg="img/home/home__bg2.jpg"></div>
+			<div class="item home__cover" data-bg="img/home/home__bg3.jpg"></div>
+			<div class="item home__cover" data-bg="img/home/home__bg4.jpg"></div>
+		</div>
+		<!-- end home bg -->
+
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -338,10 +351,10 @@
 											</div>
 
 											<div class="card__description">
-												<p>It is a long established fact that a reader will be distracted by the readable content of
-													 a page when looking at its layout. The point of using Lorem Ipsum is that it has a 
-													 more-or-less normal distribution of letters, as opposed to using 'Content here, content here',
-													  making it look like readable English.</p>
+												<p>It is a long established fact that a reader will be distracted by the readable content of a page 
+													when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal 
+													distribution of letters, as opposed to using 'Content here, content here', making it look like 
+													readable English.</p>
 											</div>
 										</div>
 									</div>
@@ -380,9 +393,9 @@
 											</div>
 
 											<div class="card__description">
-												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-													 the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley
-													 of type and scrambled it to make a type specimen book.</p>
+												<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+													 industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+													  and scrambled it to make a type specimen book.</p>
 											</div>
 										</div>
 									</div>
@@ -424,9 +437,9 @@
 
 											<div class="card__description">
 												<p>It has survived not only five centuries, but also the leap into electronic typesetting, 
-													remaining essentially unchanged. It was popularised in the 1960s with the release of 
-													Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
-													 software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+													remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset 
+													sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like
+													 Aldus PageMaker including versions of Lorem Ipsum.</p>
 											</div>
 										</div>
 									</div>
@@ -466,10 +479,10 @@
 											</div>
 
 											<div class="card__description">
-												<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default
-													 model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy.
-													  Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
-													  (injected humour and the like).</p>
+												<p>Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model
+													 text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. 
+													 Various versions have evolved over the years, sometimes by accident, sometimes on purpose 
+													 (injected humour and the like).</p>
 											</div>
 										</div>
 									</div>
@@ -551,10 +564,10 @@
 											</div>
 
 											<div class="card__description">
-												<p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, 
-													making this the first true generator on the Internet. It uses a dictionary of over 200 Latin 
-													words, combined with a handful of model sentence structures, to generate Lorem Ipsum which 
-													looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected
+												<p>All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary,
+													 making this the first true generator on the Internet. It uses a dictionary of over 200 Latin 
+													 words, combined with a handful of model sentence structures, to generate Lorem Ipsum which 
+													 looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected 
 													 humour, or non-characteristic words etc.</p>
 											</div>
 										</div>
@@ -1485,73 +1498,73 @@
 	<!-- end expected premiere -->
 
 	<!-- partners -->
-	<section class="section">
+	<!-- <section class="section">
 		<div class="container">
-			<div class="row">
+			<div class="row"> -->
 				<!-- section title -->
-				<div class="col-12">
+				<!-- <div class="col-12">
 					<h2 class="section__title section__title--no-margin">Our Partners</h2>
-				</div>
+				</div> -->
 				<!-- end section title -->
 
 				<!-- section text -->
-				<div class="col-12">
+				<!-- <div class="col-12">
 					<p class="section__text section__text--last-with-margin">It is a long <b>established</b> fact that a reader will be distracted 
 						by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less 
 						normal distribution of letters, as opposed to using.</p>
-				</div>
+				</div> -->
 				<!-- end section text -->
 
 				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
 						<img src="img/partners/themeforest-light-background.png" alt="" class="partner__img">
 					</a>
-				</div>
+				</div> -->
 				<!-- end partner -->
 
 				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
 						<img src="img/partners/audiojungle-light-background.png" alt="" class="partner__img">
 					</a>
-				</div>
+				</div> -->
 				<!-- end partner -->
 
 				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
 						<img src="img/partners/codecanyon-light-background.png" alt="" class="partner__img">
 					</a>
-				</div>
+				</div> -->
 				<!-- end partner -->
 
 				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
 						<img src="img/partners/photodune-light-background.png" alt="" class="partner__img">
 					</a>
-				</div>
+				</div> -->
 				<!-- end partner -->
 
 				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
 						<img src="img/partners/activeden-light-background.png" alt="" class="partner__img">
 					</a>
-				</div>
+				</div> -->
 				<!-- end partner -->
 
 				<!-- partner -->
-				<div class="col-6 col-sm-4 col-md-3 col-lg-2">
+				<!-- <div class="col-6 col-sm-4 col-md-3 col-lg-2">
 					<a href="#" class="partner">
 						<img src="img/partners/3docean-light-background.png" alt="" class="partner__img">
 					</a>
-				</div>
+				</div> -->
 				<!-- end partner -->
-			</div>
+			<!-- </div>
 		</div>
-	</section>
+	</section> -->
 	<!-- end partners -->
 
 	<!-- footer -->
@@ -1559,13 +1572,13 @@
 		<div class="container">
 			<div class="row">
 				<!-- footer list -->
-				<div class="col-12 col-md-3">
+				<!-- <div class="col-12 col-md-3">
 					<h6 class="footer__title">Download Our App</h6>
 					<ul class="footer__app">
 						<li><a href="#"><img src="img/Download_on_the_App_Store_Badge.svg" alt=""></a></li>
 						<li><a href="#"><img src="img/google-play-badge.png" alt=""></a></li>
 					</ul>
-				</div>
+				</div> -->
 				<!-- end footer list -->
 
 				<!-- footer list -->
@@ -1573,7 +1586,7 @@
 					<h6 class="footer__title">Resources</h6>
 					<ul class="footer__list">
 						<li><a href="#">About Us</a></li>
-						<li><a href="#">Pricing Plan</a></li>
+						<li><a href="pricing.php">Pricing Plan</a></li>
 						<li><a href="#">Help</a></li>
 					</ul>
 				</div>
@@ -1609,7 +1622,7 @@
 				<!-- footer copyright -->
 				<div class="col-12">
 					<div class="footer__copyright">
-						<small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small>
+						<!-- <small><a target="_blank" href="https://www.templateshub.net">Templates Hub</a></small> -->
 
 						<ul>
 							<li><a href="#">Terms of Use</a></li>
